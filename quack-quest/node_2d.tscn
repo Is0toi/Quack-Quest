@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ncwj6rfwy8dq" path="res://Images/grass.png" id="1_epypp"]
 [ext_resource type="Script" uid="uid://c25q3fwumvmw8" path="res://character_body_2d.gd" id="2_0hol4"]
-[ext_resource type="Texture2D" uid="uid://c1wgy6njwotp" path="res://Images/secretDuck.png" id="3_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://cdsna4bs10gqk" path="res://Images/pixil-frame-0 (3).png" id="3_epypp"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,7 +19,7 @@ script = ExtResource("2_0hol4")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(66, 61.5)
 scale = Vector2(9.25, 8.6875)
-texture = ExtResource("3_q6r6c")
+texture = ExtResource("3_epypp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 
