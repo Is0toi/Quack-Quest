@@ -608,18 +608,18 @@ theme_override_font_sizes/font_size = 100
 text = "Quit to Menu"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(279.75, -59.124996)
-scale = Vector2(2.8085938, 1.7792968)
+position = Vector2(279.75, -59.125)
+scale = Vector2(2.80859, 1.7793)
 texture = ExtResource("5_pbw6q")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(87, -403)
-scale = Vector2(5.1230464, 2.472982)
+scale = Vector2(5.12305, 2.47298)
 texture = ExtResource("6_jw32o")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(-446, 49)
-scale = Vector2(4.9886074, 3.2573237)
+scale = Vector2(4.98861, 3.25732)
 texture = ExtResource("7_50glp")
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
