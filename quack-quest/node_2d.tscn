@@ -20,3 +20,9 @@ script = ExtResource("2_0hol4")
 position = Vector2(66, 61.5)
 scale = Vector2(9.25, 8.6875)
 texture = ExtResource("3_q6r6c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Node2D" parent="Camera2D"]
