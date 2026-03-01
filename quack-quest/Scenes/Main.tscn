@@ -5,6 +5,7 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p5hy"]
 texture = ExtResource("1_jw32o")
+separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
