@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var speed = 400
 @onready var animations = $AnimatedSprite2D
 
+var bread_count = 0
+
 func _physics_process(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
@@ -22,3 +24,13 @@ func update_animation(dir):
 				animations.play("front")
 			else:
 				animations.play("back")
+
+
+func set_bread(new_bread: int) -> void:
+	bread_count = new_bread
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("bread"):
+		set_bread(bread_count+1)
+		print(bread_count)
