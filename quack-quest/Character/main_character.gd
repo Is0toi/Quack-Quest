@@ -4,14 +4,28 @@ extends CharacterBody2D
 @onready var animations = $AnimatedSprite2D
 
 var bread_count = 0
+var udp := PacketPeerUDP.new()
+var joy_dir := Vector2.ZERO
 
 func _physics_process(delta):
-	var input_direction = Input.get_vector("left", "right", "up", "down")
+	while udp.get_available_packet_count() > 0:
+		var data = udp.get_packet().get_string_from_utf8()
+		var parts = data.split(",")
+		if parts.size() >= 2:
+			var x = (float(parts[0]) - 512.0) / 512.0
+			var y = (float(parts[1]) - 512.0) / 512.0
+			joy_dir = Vector2(x, -y)
+
+	var input_direction = joy_dir
+	if input_direction == Vector2.ZERO:
+		input_direction = Input.get_vector("left", "right", "up", "down")
+
 	velocity = input_direction * speed
 	update_animation(input_direction)
 	move_and_slide()
 	
-
+func _ready():
+	udp.bind(4242)
 
 func update_animation(dir):
 	if dir == Vector2.ZERO:
