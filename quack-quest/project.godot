@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Quack Quest"
-run/main_scene="uid://d0uwh3gfrx84"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://4bc5lvrgnigt"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=2000
+window/size/viewport_height=1000
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

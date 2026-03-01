@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0uwh3gfrx84"]
+[gd_scene load_steps=2 format=3 uid="uid://cyootptxo77lq"]
 
-[ext_resource type="Script" uid="uid://cihdfdrcmcqil" path="res://Scenes/menu.gd" id="1_1rerr"]
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_1rerr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1rerr"]
 load_path = "res://.godot/imported/mit_pixel_art.png-77f0622641803320f15c8ea237a17187.ctex"
@@ -52,6 +52,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "QUIT"
 
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
