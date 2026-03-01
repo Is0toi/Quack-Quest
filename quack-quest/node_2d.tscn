@@ -173,11 +173,10 @@ texture = ExtResource("1_epypp")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("2_0hol4")
-speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_2u7jv")
-animation = &"back"
+animation = &"front"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
