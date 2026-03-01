@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cc4m73mqlrks5" path="res://kenney_rpg-urban-pack/transparent_16x16.png" id="2_50glp"]
 [ext_resource type="PackedScene" uid="uid://d14wwjmu6wyo7" path="res://Character/main_character.tscn" id="2_idj7w"]
 [ext_resource type="PackedScene" uid="uid://jlkjok8rilup" path="res://Character/bread.tscn" id="2_kln2b"]
-[ext_resource type="Script" uid="uid://47kwwdsxg0t2" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
+[ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://82840kg0fnq5" path="res://At Doom's Gate (mp3cut.net).mp3" id="5_4kpch"]
 [ext_resource type="FontFile" uid="uid://cdat56xcydst5" path="res://blue_winter/Blue Winter.otf" id="5_50glp"]
 [ext_resource type="Texture2D" uid="uid://df2sikj5qy3ht" path="res://dome.png" id="5_jw32o"]
@@ -619,7 +619,7 @@ tile_map_data = PackedByteArray("AAD9//z/AQAIAAEAAAD9/wEAAQAIAAEAAAD9/wIAAQAIAAE
 tile_set = SubResource("TileSet_h1m7h")
 
 [node name="Bread" parent="Layer0" instance=ExtResource("2_kln2b")]
-position = Vector2(6, 68)
+position = Vector2(15, 68)
 
 [node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
 z_index = 1
@@ -643,7 +643,7 @@ position = Vector2(389, -334)
 position = Vector2(-336, 73)
 
 [node name="Bread6" parent="Layer0" instance=ExtResource("2_kln2b")]
-position = Vector2(-59, -235)
+position = Vector2(-19, -232)
 
 [node name="Bread7" parent="Layer0" instance=ExtResource("2_kln2b")]
 position = Vector2(-204, -439)
@@ -725,14 +725,15 @@ texture = ExtResource("7_50glp")
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = -163.0
-offset_top = -262.0
-offset_right = 130.0
-offset_bottom = -206.0
+offset_left = -175.0
+offset_top = -277.0
+offset_right = 118.0
+offset_bottom = -205.0
 theme_override_fonts/font = ExtResource("5_50glp")
 theme_override_font_sizes/font_size = 0
 text = "Go around the map
- and collect bread!"
+ and collect bread!
+There are 10 pieces of bread"
 horizontal_alignment = 1
 
 [node name="Building3" type="Sprite2D" parent="."]
