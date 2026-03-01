@@ -26,12 +26,10 @@ func update_animation(dir):
 			else:
 				animations.play("back")
 
-
-func set_bread(new_bread: int) -> void:
-	bread_count = new_bread
-
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("bread"):
 		set_bread(bread_count+1)
 		print(bread_count)
+	
+func set_bread(new_bread: int) -> void:
+	bread_count = new_bread
