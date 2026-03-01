@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://4bc5lvrgnigt"]
+[gd_scene load_steps=8 format=4 uid="uid://4bc5lvrgnigt"]
 
 [ext_resource type="Texture2D" uid="uid://dwq6lmxsllt6s" path="res://kenney_rpg-urban-pack/Tilemap/tilemap.png" id="1_jw32o"]
 [ext_resource type="PackedScene" uid="uid://d14wwjmu6wyo7" path="res://Character/main_character.tscn" id="2_idj7w"]
-[ext_resource type="PackedScene" path="res://Character/bread.tscn" id="2_kln2b"]
-[ext_resource type="Script" uid="uid://47kwwdsxg0t2" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://jlkjok8rilup" path="res://Character/bread.tscn" id="2_kln2b"]
+[ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
+[ext_resource type="Texture2D" uid="uid://r6d3aa10agbi" path="res://Images/dome.png" id="5_pbw6q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p5hy"]
 texture = ExtResource("1_jw32o")
@@ -597,6 +598,9 @@ text = "Resume"
 [node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit to Menu"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("5_pbw6q")
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/ResumeButton" to="CanvasLayer" method="_on_resume_button_pressed"]
