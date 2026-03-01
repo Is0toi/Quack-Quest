@@ -15,14 +15,10 @@ texture = ExtResource("1_epypp")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("2_0hol4")
-speed = null
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(66, 61.5)
-scale = Vector2(9.25, 8.6875)
-texture = ExtResource("3_q6r6c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_2u7jv")
+animation = &"front"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
