@@ -177,7 +177,6 @@ sprite_frames = SubResource("SpriteFrames_ky1gn")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CapsuleShape2D_qe2me")
 
 [node name="Area2D" type="Area2D" parent="."]
