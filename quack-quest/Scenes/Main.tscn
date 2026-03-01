@@ -5,7 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://d14wwjmu6wyo7" path="res://Character/main_character.tscn" id="2_idj7w"]
 [ext_resource type="PackedScene" uid="uid://jlkjok8rilup" path="res://Character/bread.tscn" id="2_kln2b"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
+=======
+[ext_resource type="Script" uid="uid://47kwwdsxg0t2" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
+[ext_resource type="AudioStream" uid="uid://g0wvst1cmttt" path="res://At Doom's Gate (mp3cut.net).mp3" id="5_4kpch"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="Script" uid="uid://47kwwdsxg0t2" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://g0wvst1cmttt" path="res://At Doom's Gate (mp3cut.net).mp3" id="5_4kpch"]
