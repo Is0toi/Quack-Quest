@@ -6,6 +6,7 @@ extends CharacterBody2D
 var bread_count = 0
 var udp := PacketPeerUDP.new()
 var joy_dir := Vector2.ZERO
+var end_count = 20
 
 func _physics_process(delta):
 	while udp.get_available_packet_count() > 0:
@@ -41,9 +42,33 @@ func update_animation(dir):
 				animations.play("back")
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	# 1. Check if it's actually bread
 	if area.is_in_group("bread"):
-		set_bread(bread_count+1)
-		print(bread_count)
+		# 2. Update count using your setter
+		set_bread(bread_count + 1)
+		
+		# 3. IMMEDIATELY remove the bread so it can't be hit again
+		area.queue_free() 
+		
+		print("Bread collected! Total: ", bread_count)
+		
+		# 4. Check for win condition
+		if bread_count >= end_count:
+			get_tree().change_scene_to_file("res://Scenes/end.tscn")
+	if area.is_in_group("bread"):
+		# 2. Update count using your setter
+		set_bread(bread_count + 1)
+		
+		# 3. IMMEDIATELY remove the bread so it can't be hit again
+		area.queue_free() 
+		
+		print("Bread collected! Total: ", bread_count)
+
+# 4. Check for win condition
+		if bread_count >= end_count:
+			get_tree().change_scene_to_file("res://Scenes/end.tscn")
+	
 	
 func set_bread(new_bread: int) -> void:
 	bread_count = new_bread
+	
