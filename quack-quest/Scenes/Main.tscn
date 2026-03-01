@@ -600,6 +600,8 @@ layout_mode = 2
 text = "Quit to Menu"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(279.75, -59.124996)
+scale = Vector2(2.8085938, 1.7792968)
 texture = ExtResource("5_pbw6q")
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
