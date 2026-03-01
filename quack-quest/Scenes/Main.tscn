@@ -1158,10 +1158,11 @@ tile_map_data = PackedByteArray("AAD9//z/AQAIAAEAAAD9//3/AQAIAAEAAAD9//7/AQAIAAE
 tile_set = SubResource("TileSet_h1m7h")
 
 [node name="Bread" parent="Layer0" instance=ExtResource("2_kln2b")]
+position = Vector2(-16, -202)
 
 [node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
 z_index = 1
-position = Vector2(74, -1)
+position = Vector2(-21, -274)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 2
@@ -1225,14 +1226,16 @@ position = Vector2(-446, 49)
 scale = Vector2(4.98861, 3.25732)
 texture = ExtResource("7_50glp")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAACAAMAAAAWAAoAAAADAAMAAAAWAAoAAAADAAQAAAAWAAoAAAACAAQAAAAWAAoAAAABAAMAAAAWAAoAAAABAAQAAAAWAAoAAAA=")
-tile_set = SubResource("TileSet_50glp")
-
-[node name="Building3" type="Sprite2D" parent="."]
-position = Vector2(705, -209)
-scale = Vector2(0.25431, 0.2705)
-texture = ExtResource("8_50glp")
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -163.0
+offset_top = -262.0
+offset_right = 130.0
+offset_bottom = -206.0
+theme_override_font_sizes/font_size = 0
+text = "Go around the map
+ and collect bread!"
+horizontal_alignment = 1
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/ResumeButton" to="CanvasLayer" method="_on_resume_button_pressed"]
