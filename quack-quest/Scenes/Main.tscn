@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://4bc5lvrgnigt"]
+[gd_scene load_steps=7 format=4 uid="uid://4bc5lvrgnigt"]
 
 [ext_resource type="Texture2D" uid="uid://dwq6lmxsllt6s" path="res://kenney_rpg-urban-pack/Tilemap/tilemap.png" id="1_jw32o"]
 [ext_resource type="PackedScene" uid="uid://d14wwjmu6wyo7" path="res://Character/main_character.tscn" id="2_idj7w"]
 [ext_resource type="PackedScene" uid="uid://jlkjok8rilup" path="res://Character/bread.tscn" id="2_kln2b"]
+[ext_resource type="Texture2D" uid="uid://r6d3aa10agbi" path="res://Images/dome.png" id="4_rgh2o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p5hy"]
 texture = ExtResource("1_jw32o")
@@ -553,6 +554,12 @@ tile_set = SubResource("TileSet_h1m7h")
 [node name="Bread" parent="Layer0" instance=ExtResource("2_kln2b")]
 
 [node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
+z_index = 1
 position = Vector2(74, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(282, -86)
+scale = Vector2(2.703125, 2.03125)
+texture = ExtResource("4_rgh2o")
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
