@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d14wwjmu6wyo7"]
+[gd_scene load_steps=29 format=3 uid="uid://d14wwjmu6wyo7"]
 
 [ext_resource type="Script" uid="uid://c25q3fwumvmw8" path="res://Character/main_character.gd" id="1_f1467"]
 [ext_resource type="Texture2D" uid="uid://b8ygvf2wsyixe" path="res://Images/back.png" id="2_t6n5c"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3mum33tvmil3" path="res://Images/idle.png" id="4_f4bo0"]
 [ext_resource type="Texture2D" uid="uid://q2l6oaihdy7o" path="res://Images/left.png" id="5_aknfw"]
 [ext_resource type="Texture2D" uid="uid://e6bvoamdkh08" path="res://Images/right.png" id="6_cfoaq"]
+[ext_resource type="FontFile" uid="uid://cdat56xcydst5" path="res://blue_winter/Blue Winter.otf" id="7_t6n5c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0ka3"]
 atlas = ExtResource("2_t6n5c")
@@ -188,5 +189,34 @@ shape = SubResource("CapsuleShape2D_f1467")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_t6n5c")
+theme_override_font_sizes/font_size = 50
+text = "0/10 Bread Collected"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

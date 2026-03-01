@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 400
 @onready var animations = $AnimatedSprite2D
+@onready var count_label = get_node("CanvasLayer/UI/Label")
 
 var bread_count = 0
 var udp := PacketPeerUDP.new()
@@ -27,6 +28,11 @@ func _physics_process(delta):
 	
 func _ready():
 	udp.bind(4242)
+
+func set_bread(new_bread: int) -> void:
+	bread_count = new_bread
+	# This updates the text box whenever a bread is picked up
+	count_label.text = str(bread_count / 2) + "/" + str(end_count / 2) + " bread collected"
 
 func update_animation(dir):
 	if dir == Vector2.ZERO:
@@ -67,8 +73,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 # 4. Check for win condition
 		if bread_count >= end_count:
 			get_tree().change_scene_to_file("res://Scenes/end.tscn")
-	
-	
-func set_bread(new_bread: int) -> void:
-	bread_count = new_bread
 	
