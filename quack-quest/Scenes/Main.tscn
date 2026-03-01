@@ -558,19 +558,3 @@ tile_set = SubResource("TileSet_h1m7h")
 position = Vector2(74, -1)
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
-=======
-[node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
-z_index = 1
-
-=======
-[node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
-z_index = 1
-
->>>>>>> Stashed changes
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="TileMapLayer"]
-position = Vector2(237, -58.000004)
-scale = Vector2(2.7357867, 1.7579691)
-texture = ExtResource("3_kln2b")
->>>>>>> Stashed changes
