@@ -559,6 +559,12 @@ tile_set = SubResource("TileSet_h1m7h")
 [node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
 z_index = 1
 position = Vector2(74, -1)
+disable_mode = 2
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Layer0"]
+position = Vector2(283, -57)
+scale = Vector2(2.8085938, 1.7792968)
+polygon = PackedVector2Array(-76.19472, 35.407246, -78.33102, 31.473106, -77.61891, 27.538967, -75.48261, 25.29089, -72.63422, 25.29089, -70.85396, 27.538967, -70.49791, 31.473106, -70.49791, 34.845226, -72.990265, 36.531284)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 2
@@ -607,11 +613,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Quit to Menu"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(279.75, -59.124996)
-scale = Vector2(2.8085938, 1.7792968)
-texture = ExtResource("5_pbw6q")
-
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(87, -403)
 scale = Vector2(5.1230464, 2.472982)
@@ -621,6 +622,17 @@ texture = ExtResource("6_jw32o")
 position = Vector2(-446, 49)
 scale = Vector2(4.9886074, 3.2573237)
 texture = ExtResource("7_50glp")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = -8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(283, -57)
+scale = Vector2(2.8085938, 1.7792968)
+texture = ExtResource("5_pbw6q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D/Sprite2D"]
+polygon = PackedVector2Array(-16.022255, 66.31833, -60.52851, 66.880356, -66.22531, 40.465424, -66.58136, -4.4961586, -56.25591, -10.116356, -54.83171, -29.787048, -39.521557, -33.159164, -38.453407, -47.209663, -10.681503, -62.946213, -5.3407516, -66.31834, 1.0681534, -66.31834, 7.121002, -66.31834, 13.529907, -59.012077, 28.127953, -53.953896, 33.112663, -47.209663, 39.165504, -34.84523, 48.422813, -32.597145, 54.47567, -28.66301, 58.39222, -21.91877, 62.664818, -11.240395, 64.08901, 44.39956, 63.732964, 53.953896, 62.30877, 59.574097, 48.422813, 64.63227, 28.840065, 64.07025, -4.9846954, 64.63227)
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/ResumeButton" to="CanvasLayer" method="_on_resume_button_pressed"]
