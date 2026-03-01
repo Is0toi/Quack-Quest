@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dwq6lmxsllt6s" path="res://kenney_rpg-urban-pack/Tilemap/tilemap.png" id="1_jw32o"]
 [ext_resource type="PackedScene" uid="uid://d14wwjmu6wyo7" path="res://Character/main_character.tscn" id="2_idj7w"]
-[ext_resource type="PackedScene" uid="uid://jlkjok8rilup" path="res://Character/bread.tscn" id="2_kln2b"]
-[ext_resource type="Texture2D" uid="uid://r6d3aa10agbi" path="res://Images/dome.png" id="4_rgh2o"]
+[ext_resource type="PackedScene" path="res://Character/bread.tscn" id="2_kln2b"]
+[ext_resource type="Script" uid="uid://47kwwdsxg0t2" path="res://Scenes/canvas_layer.gd" id="4_rgh2o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1p5hy"]
 texture = ExtResource("1_jw32o")
@@ -557,9 +557,47 @@ tile_set = SubResource("TileSet_h1m7h")
 z_index = 1
 position = Vector2(74, -1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(282, -86)
-scale = Vector2(2.703125, 2.03125)
-texture = ExtResource("4_rgh2o")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 2
+visible = false
+script = ExtResource("4_rgh2o")
+
+[node name="BackgroundDim" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.470588)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "PAUSED"
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit to Menu"
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/ResumeButton" to="CanvasLayer" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/QuitButton" to="CanvasLayer" method="_on_quit_button_pressed"]
