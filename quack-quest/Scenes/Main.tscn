@@ -587,14 +587,20 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 200
 text = "PAUSED"
+horizontal_alignment = 1
 
 [node name="ResumeButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
 layout_mode = 2
+theme_override_font_sizes/font_size = 100
 text = "Resume"
 
 [node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
 layout_mode = 2
+theme_override_font_sizes/font_size = 100
 text = "Quit to Menu"
 
 [connection signal="area_entered" from="Layer0/Bread" to="Layer0/Bread" method="_on_area_entered"]
