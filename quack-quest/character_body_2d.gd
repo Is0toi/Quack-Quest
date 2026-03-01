@@ -10,6 +10,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 
+
 func update_animation(dir):
 	if dir == Vector2.ZERO:
 		animations.play("idle")
