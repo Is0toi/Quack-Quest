@@ -551,6 +551,7 @@ tile_map_data = PackedByteArray("AAD9//z/AQAIAAEAAAD9//3/AQAIAAEAAAD9//7/AQAIAAE
 tile_set = SubResource("TileSet_h1m7h")
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="Bread" parent="Layer0" instance=ExtResource("2_kln2b")]
 
 [node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
@@ -561,6 +562,11 @@ position = Vector2(74, -1)
 [node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
 z_index = 1
 
+=======
+[node name="Main-Character" parent="Layer0" instance=ExtResource("2_idj7w")]
+z_index = 1
+
+>>>>>>> Stashed changes
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="TileMapLayer"]
